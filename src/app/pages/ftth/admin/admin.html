@@ -2,4 +2,16 @@
     <app-create-user-task *ngIf="activePage === 'create-user-task'"></app-create-user-task>
     <app-create-user *ngIf="activePage === 'create-user'"></app-create-user>
     <app-delete-user *ngIf="activePage === 'delete-user'"></app-delete-user>
+
+    <!-- Inline Add Feature form to avoid creating new files -->
+    <div class="form-wrapper" *ngIf="activePage === 'add-feature'">
+      <app-ftth-form header="Add Clarity Features">
+        <div class="field-row">
+          <app-input-field label="FTTH NO"></app-input-field>
+        </div>
+        <div class="get-details-button">
+          <app-button label="Get Details"></app-button>
+        </div>
+      </app-ftth-form>
+    </div>
 </div>

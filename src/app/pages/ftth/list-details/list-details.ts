@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FtthFormComponent } from '../shared/ftth-form/ftth-form';
 import { InputFieldComponent } from '../../../shared/input-field/input-field';
@@ -11,4 +11,6 @@ import { ButtonComponent } from '../../../shared/button/button';
   templateUrl: './list-details.html',
   styleUrl: './list-details.css'
 })
-export class ListDetailsComponent {}
+export class ListDetailsComponent {
+  @Input() activePage: string = 'list-details';
+}

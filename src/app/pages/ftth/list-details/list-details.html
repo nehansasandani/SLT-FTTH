@@ -1,13 +1,35 @@
 <div class="list-details-wrapper">
-  <app-ftth-form header="List Details">
-    <p class="card-help">Enter an FTTH number and fetch the related service details.</p>
-
+  <!-- List Details Form -->
+  <app-ftth-form *ngIf="activePage === 'list-details'" header="List Details">
     <div class="field-row">
       <app-input-field label="FTTH NO"></app-input-field>
     </div>
 
     <div class="get-details-button">
       <app-button label="Get Details"></app-button>
+    </div>
+  </app-ftth-form>
+
+  <!-- List ONT SN Form -->
+  <app-ftth-form *ngIf="activePage === 'list-ont-sn'" header="FTTH - List ONT SN">
+    <div class="field-row">
+      <app-input-field label="FTTH NO"></app-input-field>
+    </div>
+
+    <div class="get-details-button">
+      <app-button label="Get Details"></app-button>
+    </div>
+
+    <div class="field-row">
+      <app-input-field label="Registration ID"></app-input-field>
+    </div>
+
+    <div class="field-row">
+      <app-input-field label="Clarity ONT SN"></app-input-field>
+    </div>
+
+    <div class="field-row">
+      <app-input-field label="NMS ONT SN"></app-input-field>
     </div>
   </app-ftth-form>
 </div>

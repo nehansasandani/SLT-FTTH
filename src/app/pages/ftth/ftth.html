@@ -2,14 +2,8 @@
   <app-side-nav *ngIf="showSideNav" (pageSelected)="onPageSelected($event)" ></app-side-nav>
 
   <div class="content-area" *ngIf="showSideNav; else routeHint">
-    <div class="page-intro">
-      <p class="eyebrow">FTTH Operations</p>
-      <h1>Fast service lookup</h1>
-      <p class="page-copy">Choose a section from the left menu and work inside the centered panel.</p>
-    </div>
-
     <div class="content-inner" *ngIf="activeNavItem === 'list'">
-      <app-list-details></app-list-details>
+      <app-list-details [activePage]="activePage"></app-list-details>
     </div>
     <div class="content-inner" *ngIf="activeNavItem === 'operations'">
       <app-admin [activePage]="activePage"></app-admin>

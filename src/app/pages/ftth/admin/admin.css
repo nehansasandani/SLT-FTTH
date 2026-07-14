@@ -3,3 +3,25 @@
   justify-content: center; /* horizontal */
   align-items: flex-start;     /* vertical */
 }
+
+.form-wrapper {
+  display: block;
+  width: 750px;
+  margin-top: 38px;
+  margin-bottom: 24px;
+}
+
+.field-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 50%;
+}
+
+.field-row app-input-field {
+  flex: 1;
+}
+
+.get-details-button {
+  margin-top: 20px;
+}

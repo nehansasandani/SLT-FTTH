@@ -20,7 +20,7 @@ export class FTTHComponent {
   sidebarService = inject(SidebarService);
   showSideNav = false;
   activeNavItem: string = 'list';
-  activePage: string = '';
+  activePage: string = 'list-details';
 
   constructor(private router: Router) {
     this.updateRouteState(this.router.url);

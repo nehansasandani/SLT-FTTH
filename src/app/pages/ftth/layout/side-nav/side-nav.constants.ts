@@ -68,5 +68,5 @@ const SIDE_NAV_ITEMS = [
   },
 ];
 
-const DEFAULT_ACTIVE_PAGE = SIDE_NAV_ITEMS.find(i => i.defaultPage)?.defaultPage ?? '';
+const DEFAULT_ACTIVE_PAGE = SIDE_NAV_ITEMS.find(i => i.active && i.defaultPage)?.defaultPage ?? SIDE_NAV_ITEMS.find(i => i.defaultPage)?.defaultPage ?? '';
 export { SIDE_NAV_ITEMS, DEFAULT_ACTIVE_PAGE };
