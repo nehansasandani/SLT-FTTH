@@ -1,0 +1,13 @@
+<div class="input-dropdown-wrapper">
+  <app-input-field [label]="label"></app-input-field>
+  <div class="dropdown" (click)="toggleDropdown()">
+    <span class="dropdown-value">{{ selectedOption }}</span>
+    <span class="dropdown-arrow">&#8964;</span>
+  </div>
+  <div class="dropdown-menu" *ngIf="isOpen">
+    <div class="dropdown-item" *ngFor="let option of options" (click)="selectOption(option)">
+    {{ option }}
+  </div>
+
+  </div>
+</div>

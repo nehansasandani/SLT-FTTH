@@ -1,0 +1,9 @@
+<div class="input-wrapper">
+  <label [class.floating]="isFloating">{{ label }}</label>
+  <input
+    [value]="value"
+    (input)="onInput($event)"
+    (focus)="onFocus()"
+    (blur)="onBlur()"
+  />
+</div>

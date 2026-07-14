@@ -1,0 +1,50 @@
+::ng-deep .ftth-layout .content-area {
+  align-items: flex-start;
+  margin-top: 80px;
+}
+
+.form-wrapper {
+  display: block;
+  width: 750px;
+  margin-top: 38px;
+  margin-bottom: 24px;
+}
+
+.field-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 50%;
+  margin-bottom: 16px;
+}
+
+.field-row app-input-field {
+  flex: 1;
+}
+
+.field-row-with-side {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.field-row-with-side app-side-text {
+  min-width: 80px;
+  flex-shrink: 0;
+  margin-left:auto;
+}
+
+.field-row-with-side app-button {
+  flex-shrink: 0;
+}
+
+.content-box {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+
+::ng-deep .btn {
+  width: 143px !important;
+}

@@ -1,0 +1,43 @@
+<div class="side-nav">
+
+  <div class="nav-header">
+    <svg class="close-btn" width="16" height="16" viewBox="0 0 16 16" fill="none">
+      <line x1="1" y1="1" x2="15" y2="15" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+      <line x1="15" y1="1" x2="1" y2="15" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <div class="logo-section">
+    <img src="/logo.png" alt="SLT Ribe Logo" class="logo-image">
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="nav-items">
+    <div class="nav-item" [class.active-item]="item.expanded || item.active" *ngFor="let item of navItems" (click)="toggleItem(item)">
+
+      <span class="nav-icon" [innerHTML]="sanitize(item.rawIcon)"></span>
+      <span class="nav-label" [class.active-label]="item.expanded || item.active">{{ item.label }}</span>
+
+      <svg *ngIf="item.hasChildren && !item.expanded" class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#444" stroke-width="2" stroke-linecap="round">
+        <polyline points="9 18 15 12 9 6"/>
+      </svg>
+      <svg *ngIf="item.hasChildren && item.expanded" class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5340C3" stroke-width="2" stroke-linecap="round">
+        <polyline points="6 9 12 15 18 9"/>
+      </svg>
+
+      <div class="sub-items" *ngIf="item.expanded && item.children?.length">
+        <div
+          class="sub-item"
+          *ngFor="let child of item.children; let i = index"
+          [class.active]="activePage === child.key"
+          (click)="selectPage(child, $event)">
+          <span class="dot" [ngClass]="getDotColor(i)"></span>
+          <span class="sub-label" [class.active-sub-label]="activePage === child.key">{{ child.label }}</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>

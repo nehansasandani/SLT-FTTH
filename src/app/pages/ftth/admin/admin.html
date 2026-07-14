@@ -1,0 +1,5 @@
+<div class="create-user-task-wrapper">
+    <app-create-user-task *ngIf="activePage === 'create-user-task'"></app-create-user-task>
+    <app-create-user *ngIf="activePage === 'create-user'"></app-create-user>
+    <app-delete-user *ngIf="activePage === 'delete-user'"></app-delete-user>
+</div>

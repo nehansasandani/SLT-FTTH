@@ -1,0 +1,242 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+
+.login-page{
+    width: 100%;
+    min-height: 100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.overlay-card{
+    width:620px;
+    height:870px;
+    background: rgba(111, 125, 152, 0.92);
+    backdrop-filter: blur(10px);
+    border-radius: 40px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-between;
+    padding: 60px 0 40px;
+    box-shadow: 0 20px 60px rgba(255, 255, 255, 0.08);
+}
+
+.login-card{
+    width:390px;
+    background: #f5f7fb;
+    border-radius: 36px;
+    padding: 42px 38px;
+    box-shadow:0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.login-card h1{
+    font-size:42px;
+    font-weight:700;
+    color:#111827;
+    margin-bottom: 12px;
+}
+
+.subtitle{
+    color:#6b7280;
+    line-height:1.6;
+    font-size:15px;
+    margin-bottom:38px;
+}
+
+.form-group{
+    margin-bottom:26px;
+}
+
+.form-group label, 
+.password-header label{
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:1px;
+    color:#1f2937;
+    display:block;
+    margin-bottom:10px;
+}
+
+.password-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom: 10px;
+}
+
+.password-header a{
+    text-decoration:none;
+    color:#1877f2;
+    font-size:13px;
+    font-weight:600;
+    transition: 0.3s;
+}
+
+.password-header a:hover{
+    color:#0056d6;
+}
+
+.input-box{
+    width:100%;
+    height:58px;
+    background:#ffffff;
+    border-radius:14px;
+    display:flex;
+    align-items:center;
+    padding: 0 18px;
+    border:1px solid #e5e7eb;
+    transition: 0.3s ease;
+}
+
+.input-box:focus-within{
+    border-color:#1877f2;
+    box-shadow: 0 0 0 4px rgba(24, 119. 242, 0.12);
+}
+
+.input-box i {
+    color:3c0c6d2;
+    font-size:18px;
+}
+
+.input-box input{
+   width:100%;
+   height:100%;
+   border: none;
+   outline: none;
+   background: transparent;
+   margin-left: 12px;
+   font-size: 15px;
+   color:#111827; 
+}
+
+.input-box input::placeholder{
+    color:#c5cad3;
+}
+
+.eye-icon{
+    cursor:pointer;
+}
+
+.remember{
+    display:flex;
+    align-items:center;
+    margin-top:22px;
+    margin-bottom: 30px;
+}
+
+.remember input{
+    width:18px;
+    height: 18px;
+    accent-color: #1877f2;
+    margin-right: 10px;
+}
+
+.remember label{
+    color:#6b7280;
+    font-size: 15px;
+}
+
+.login-btn{
+    width:100%;
+    height:60px;
+    border:none;
+    border-radius:14px;
+    background:linear-gradient(135deg, #0d6efd, #005fe0);
+    color:white;
+    font-size:22px;
+    font-weight:600;
+    cursor:pointer;
+    transition: 0.3s ease;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:12px;
+    box-shadow:0 8px 20px rgba(13, 110, 253, 0.35);
+}
+
+.login-btn:hover{
+    transform:translateY(-3px);
+    box-shadow: 0 12px 28px rgba(13, 110, 253, 0.45);
+}
+
+.divider{
+    width:100%;
+    height:1px;
+    background:#d8dce4;
+    margin:36px 0;
+}
+
+.support{
+    text-align:center;
+}
+
+.support{
+    text-align: center;
+}
+
+.support p{
+    font-size:20px;
+    color:#4b5563;
+    font-weight:600;
+    margin-bottom:20px;
+}
+
+.support-links{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+}
+
+.support-item{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    color:#7b8494;
+    font-size: 14px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.support-item:hover{
+    color:#1877f2;
+    cursor:pointer;
+}
+
+.logo-area{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.logo-area img{
+    width:170px;
+    object-fit: contain;
+}
+
+@media(max-width:768px){
+    .overlay-card{
+        width:100%;
+        height:auto;
+        padding: 30px 20px;
+    }
+
+    .login-card{
+        width:100%;
+    }
+
+    .login-card h1{
+        font-size: 34px;
+    }
+
+    .support-links{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo-area img{
+        width:140px;
+    }
+}

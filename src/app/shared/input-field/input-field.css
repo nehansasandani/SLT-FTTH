@@ -1,0 +1,41 @@
+.input-wrapper {
+  position: relative;
+  padding-top: 18px;
+  margin-bottom: 18px;
+  background: transparent;
+}
+
+label {
+  position: absolute;
+  top: 22px;
+  left: 8px;
+  color: #393939;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  pointer-events: none;
+}
+
+label.floating {
+  top: 0;
+  font-size: 11px;
+  color: #5041BC;
+}
+
+input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid rgba(112, 123, 125, 0.55);
+  background: transparent;
+  outline: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  padding: 6px 0 6px 8px;
+  color: #333;
+  box-sizing: border-box;
+  transition: border-color 0.18s ease;
+}
+
+input:focus {
+  border-bottom-color: #5340C3;
+}

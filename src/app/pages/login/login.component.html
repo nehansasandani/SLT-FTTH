@@ -1,0 +1,76 @@
+<div class="login-page"
+    style="background: linear-gradient(rgba(0, 7, 25, 0.78),
+    rgba(0, 7, 25, 0.82)),
+    url('/public/bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;">
+    <div class="overlay-card">
+        <div class="login-card">
+            <h1>Welcome Back</h1>
+
+            <p class="subtitle">
+                Please enter your credentials to access the management portal.
+            </p>
+
+            <!--Username-->
+            <div class="form-group">
+                <label>USER NAME</label>
+
+                <div class="input-box">
+                    <i class="fa-solid fa-at"></i>
+
+                    <input type="email" placeholder="example@gmail.com"/>
+                </div>
+            </div>
+
+            <!--Password-->
+            <div class="password-header">
+                <label>PASSWORD</label>
+
+                <a href="#"> Get Password</a>
+            </div>
+
+            <div class="input-box">
+                <i class="fa-solid fa-lock"></i>
+
+                <input [type]="showPassword ? 'text' : 'password'"  placeholder="********"/>
+
+                <i class="fa-solid eye-icon" [ngClass]="showPassword ? 'fa-eye-slash' : 'fa-eye'"  (click)="togglePassword()"></i>
+            </div>
+
+            <!--CHECKBOX-->
+            <div class="remember">
+                <input type="checkbox" id="remember"/>
+
+                <label for="remember">Keep me logged in </label>
+            </div>
+
+            <button class="login-btn">
+                Log In
+                <i class="fa-solid fa-arrow-right-to-bracket"></i>
+            </button>
+
+            <div class="divider"></div>
+
+            <div class="support">
+                <p>Need technical assistance?</p>
+
+                <div class="support-item">
+                    <i class="fa-regular fa-circle-question"></i>
+                    <span>Support Center</span>
+                </div>
+
+                <div class="support-item">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Security Audit</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--Logo-->
+    <div class="logo=area">
+        <img src="/public/logo.png" alt="SLT LOGO">
+    </div>
+</div>

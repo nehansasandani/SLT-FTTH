@@ -1,0 +1,46 @@
+.form-wrapper {
+  display: block;
+  width: 750px;
+  margin-top: 38px;
+  margin-bottom: 24px;
+}
+
+.content-header {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.field-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 50%;
+}
+
+.field-row app-input-field {
+  flex: 1;
+}
+
+.field-row-with-side {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 16px;
+}
+
+.field-row-with-side app-input-field {
+  width: 50%;
+}
+
+.field-row-with-side app-side-text {
+  margin-left: 16px;
+}
+
+.field-row-with-side app-button {
+  margin-left: 50px;
+}
+
+.get-details-button {
+  margin-top: 20px;
+}

@@ -1,0 +1,19 @@
+.list-details-wrapper {
+  width: min(100%, 620px);
+  margin-top: 8px;
+}
+
+.card-help {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.field-row {
+  width: min(100%, 360px);
+}
+
+.get-details-button {
+  margin-top: 26px;
+}

@@ -1,0 +1,97 @@
+.form-wrapper {
+  display: block;
+  width: 750px;
+  margin-top: 38px;
+  margin-bottom: 24px;
+  z-index: 150;
+  position: relative;
+}
+
+.content-header {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.field-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 50%;
+}
+
+.field-row app-input-field {
+  flex: 1;
+}
+
+.field-row-with-side {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.field-row-with-side app-input-field {
+  width: 50%;
+}
+
+.field-row-with-side app-side-text {
+  margin-left: 16px;
+}
+
+.get-details-button {
+  margin-top: 20px;
+}
+
+:host{
+  display: block;
+  overflow-y: auto;
+  max-height: calc(100vh - 64px);
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+:host::-webkit-scrollbar {
+  display: none;
+}
+
+.vp-select-wrapper {
+  position: relative;
+  padding-top: 16px;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.vp-label {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  color: #393939;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  pointer-events: none;
+}
+
+.vp-label.floating {
+  top: 0;
+  font-size: 11px;
+  color: #5041BC;
+}
+
+.vp-select {
+  width: 10%;
+  position: absolute;
+  top: 0;
+  right:0;
+  border: none;
+  background: transparent;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  padding: 4px 0;
+  appearance: none;
+  cursor: pointer;
+  color: #333;
+  outline: none;
+}
