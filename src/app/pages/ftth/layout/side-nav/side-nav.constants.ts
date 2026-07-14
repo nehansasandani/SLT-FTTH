@@ -15,10 +15,16 @@ const SIDE_NAV_ITEMS = [
   {
     label: 'Operations',
     route: '',
+    defaultPage: 'create-user-task',
     hasChildren: true,
     expanded: false,
     active: false,
-    children: [],
+    children: [
+      { label: 'Create User With Task', key: 'create-user-task', section: 'operations', route: '' },
+      { label: 'Create User', key: 'create-user', section: 'operations', route: '' },
+      { label: 'Delete User', key: 'delete-user', section: 'operations', route: '' },
+      { label: 'Add Feature', key: 'add-feature', section: 'operations', route: '' },
+    ],
     rawIcon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>`
   },
   {
@@ -34,20 +40,16 @@ const SIDE_NAV_ITEMS = [
   {
     label: 'Admin',
     route: '',
-    defaultPage: 'create-user-task',
+    defaultPage: 'admin-delete-user',
     hasChildren: true,
     expanded: false,
     active: false,
     rawIcon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>`,
     children: [
-      { label: 'Create User With Task', key: 'create-user-task', section: 'admin', route: '' },
-      { label: 'Create User', key: 'create-user', section: 'admin', route: '' },
-      { label: 'Delete User', key: 'delete-user', section: 'admin', route: '' },
       { label: 'Admin Delete User', key: 'admin-delete-user', section: 'admin', route: '' },
       { label: 'Delete User With MSAN', key: 'delete-user-MSAN', section: 'admin', route: '' },
       { label: 'Admin Delete User With MSAN', key: 'admin-delete-user-MSAN', section: 'admin', route: '' },
       { label: 'Delete Voice', key: 'delete-voice', section: 'admin', route: '' },
-      { label: 'Add Feature', key: 'add-feature', section: 'admin', route: '' },
     ]
   },
   {

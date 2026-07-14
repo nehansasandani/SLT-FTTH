@@ -11,6 +11,9 @@
     <div class="content-inner" *ngIf="activeNavItem === 'list'">
       <app-list-details></app-list-details>
     </div>
+    <div class="content-inner" *ngIf="activeNavItem === 'operations'">
+      <app-admin [activePage]="activePage"></app-admin>
+    </div>
     <div class="content-inner" *ngIf="activeNavItem === 'admin'">
       <app-admin [activePage]="activePage"></app-admin>
     </div>
