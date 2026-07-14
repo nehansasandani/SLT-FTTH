@@ -1,8 +1,9 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { SIDE_NAV_ITEMS, DEFAULT_ACTIVE_PAGE } from './side-nav.constants';
 import { DomSanitizer } from '@angular/platform-browser';
+import { SidebarService } from '../../../../sidebar.service';
 
 @Component({
   selector: 'app-side-nav',
@@ -12,6 +13,7 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrl: './side-nav.css'
 })
 export class SideNavComponent {
+  sidebarService = inject(SidebarService);
   activePage: string = DEFAULT_ACTIVE_PAGE;
   dotColors = ['dot-orange', 'dot-red', 'dot-green', 'dot-blue'];
   navItems: any[] = SIDE_NAV_ITEMS;

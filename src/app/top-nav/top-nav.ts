@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { SidebarService } from '../sidebar.service';
 
 @Component({
   selector: 'app-top-nav',
@@ -10,6 +11,8 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   styleUrl: './top-nav.css'
 })
 export class TopNavComponent {
+  sidebarService = inject(SidebarService);
+
   sections = [
 
         {label: 'Home', route: '/'},
