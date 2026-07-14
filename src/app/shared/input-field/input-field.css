@@ -7,35 +7,39 @@
 
 label {
   position: absolute;
-  top: 22px;
+  top: 24px;
   left: 8px;
-  color: #393939;
+  color: #6b7280;
   font-family: 'Inter', sans-serif;
   font-size: 14px;
-  transition: all 0.2s ease;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   pointer-events: none;
 }
 
 label.floating {
   top: 0;
   font-size: 11px;
-  color: #5041BC;
+  font-weight: 600;
+  color: #6366f1;
+  letter-spacing: 0.02em;
 }
 
 input {
   width: 100%;
   border: none;
-  border-bottom: 1px solid rgba(112, 123, 125, 0.55);
+  border-bottom: 1.5px solid rgba(99, 102, 241, 0.2);
   background: transparent;
   outline: none;
   font-family: 'Inter', sans-serif;
   font-size: 14px;
-  padding: 6px 0 6px 8px;
-  color: #333;
+  padding: 8px 0 8px 8px;
+  color: #111827;
   box-sizing: border-box;
-  transition: border-color 0.18s ease;
+  transition: all 0.2s ease;
+  border-radius: 4px 4px 0 0;
 }
 
 input:focus {
-  border-bottom-color: #5340C3;
+  border-bottom-color: #6366f1;
+  background: rgba(99, 102, 241, 0.02);
 }

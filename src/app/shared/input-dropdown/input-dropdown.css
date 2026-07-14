@@ -6,9 +6,9 @@
   display: flex;
   position: relative;
   align-items: flex-end;
-  border-bottom: 1px solid #707B7D;
-  padding-top: 16px;
-  margin-bottom: 16px;
+  border-bottom: 1.5px solid rgba(99, 102, 241, 0.2);
+  padding-top: 18px;
+  margin-bottom: 18px;
   width: 100%;
 }
 

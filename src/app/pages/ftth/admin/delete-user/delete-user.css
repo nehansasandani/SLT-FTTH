@@ -7,8 +7,15 @@
 
 .content-header {
   font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  margin-top: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #6b7280;
+  margin-top: 28px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding-bottom: 6px;
 }
 
 .field-row {

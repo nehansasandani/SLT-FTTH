@@ -1,20 +1,32 @@
+:host {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .list-details-wrapper {
+  display: block;
   width: min(100%, 620px);
-  margin-top: 8px;
+  margin-top: 38px;
+  margin-bottom: 24px;
 }
 
 .card-help {
-  color: #666;
+  color: #6b7280;
   font-size: 14px;
   line-height: 1.6;
   margin-bottom: 20px;
 }
 
 .field-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
   width: min(100%, 360px);
 }
 
 .get-details-button {
-  margin-top: 26px;
-  margin-bottom: 26px;
+  margin-top: 20px;
+  margin-bottom: 24px;
 }

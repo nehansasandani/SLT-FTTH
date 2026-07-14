@@ -20,8 +20,8 @@
   align-items: flex-start;
   min-height: 100%;
   background:
-    radial-gradient(circle at top right, rgba(83, 64, 195, 0.07), transparent 34%),
-    linear-gradient(180deg, #ffffff 0%, #fbfbff 100%);
+    radial-gradient(circle at top right, rgba(99, 102, 241, 0.07), transparent 35%),
+    linear-gradient(180deg, #ffffff 0%, #fcfcff 100%);
   transition: margin-left 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -38,9 +38,9 @@
   align-items: center;
   padding: 6px 12px;
   border-radius: 999px;
-  background: rgba(83, 64, 195, 0.08);
-  color: #5340C3;
-  font-size: 12px;
+  background: rgba(99, 102, 241, 0.08);
+  color: #4f46e5;
+  font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -50,12 +50,13 @@
 .page-intro h1 {
   font-size: 30px;
   line-height: 1.1;
-  color: #171717;
+  color: #111827;
   margin-bottom: 10px;
+  font-weight: 700;
 }
 
 .page-copy {
-  color: #666;
+  color: #4b5563;
   font-size: 15px;
   line-height: 1.6;
   max-width: 520px;
@@ -65,6 +66,7 @@
   display: flex;
   justify-content: center;
   width: 100%;
+  align-self: stretch;
   padding-bottom: 18px;
 }
 
@@ -76,12 +78,21 @@
   min-height: 100%;
   padding: 44px 44px 56px;
   background:
-    radial-gradient(circle at top right, rgba(83, 64, 195, 0.07), transparent 34%),
-    linear-gradient(180deg, #ffffff 0%, #fbfbff 100%);
+    radial-gradient(circle at top right, rgba(99, 102, 241, 0.07), transparent 35%),
+    linear-gradient(180deg, #ffffff 0%, #fcfcff 100%);
 }
 
 .route-hint-card {
   max-width: 520px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(99, 102, 241, 0.08);
+  padding: 36px;
+  border-radius: 28px;
+  box-shadow: 
+    0 16px 36px -8px rgba(99, 102, 241, 0.06),
+    0 1px 3px rgba(0, 0, 0, 0.01);
 }
 
 /* Sidebar transition styles */
@@ -95,6 +106,12 @@ app-side-nav {
   display: block;
   overflow: hidden;
   transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
+}
+
+app-list-details, app-admin, app-suspend-resume, app-change {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .ftth-layout:not(.sidebar-open) app-side-nav {
