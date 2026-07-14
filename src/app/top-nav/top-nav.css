@@ -7,7 +7,6 @@
 .top-nav {
   display: flex;
   align-items: center;
-  justify-content: flex-end; /* Align the capsule to the right, next to the notification bell */
   background: transparent;
   height: 56px;
   width: 100%;
@@ -42,14 +41,14 @@
   transform: scale(0.95);
 }
 
-/* Navigation Items Container - A compact, elegant glassmorphic capsule on the right */
+/* Navigation Items Container - Stretches dynamically to fill the top bar width */
 .nav-items {
   display: flex;
   align-items: center;
   list-style: none;
   margin: 0;
   padding: 6px;
-  gap: 6px;
+  gap: 8px;
   background: rgba(255, 255, 255, 0.45);
   border: 1px solid rgba(83, 64, 195, 0.08);
   border-radius: 30px;
@@ -61,11 +60,12 @@
   flex-wrap: nowrap;
   overflow: visible;
   transition: all 0.3s ease;
-  width: max-content;
+  width: 100%; /* Stretch fully across the page */
 }
 
 /* Individual Navigation Items */
 .nav-items li {
+  flex: 1; /* Stretch items evenly across the wide bar */
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -75,7 +75,6 @@
   cursor: pointer;
   font-family: 'Inter', sans-serif;
   white-space: nowrap;
-  padding: 0 1.25rem; /* Comfortable horizontal padding */
   height: 40px;
   border-radius: 20px;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
