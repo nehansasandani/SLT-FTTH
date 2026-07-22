@@ -1,5 +1,5 @@
 <div class="ftth-layout" [class.sidebar-open]="showSideNav && sidebarService.isOpen()">
-  <app-side-nav *ngIf="showSideNav" (pageSelected)="onPageSelected($event)" ></app-side-nav>
+  <app-side-nav *ngIf="showSideNav" [activePage]="activePage" (pageSelected)="onPageSelected($event)" ></app-side-nav>
 
   <div class="content-area" *ngIf="showSideNav; else routeHint">
     <div class="content-inner" *ngIf="activeNavItem === 'list'">

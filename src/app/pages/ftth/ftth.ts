@@ -19,8 +19,8 @@ import { ListDetailsComponent } from './list-details/list-details';
 export class FTTHComponent {
   sidebarService = inject(SidebarService);
   showSideNav = false;
-  activeNavItem: string = 'list';
-  activePage: string = 'list-details';
+  activeNavItem: string = 'admin';
+  activePage: string = 'create-user-task';
 
   constructor(private router: Router) {
     this.updateRouteState(this.router.url);

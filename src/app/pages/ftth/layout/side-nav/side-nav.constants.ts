@@ -4,8 +4,8 @@ const SIDE_NAV_ITEMS = [
     route: '',
     defaultPage: 'list-details',
     hasChildren: true,
-    expanded: true,
-    active: true,
+    expanded: false,
+    active: false,
     rawIcon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>`,
     children: [
       { label: 'List Details', key: 'list-details', section: 'list', route: '' },
@@ -15,16 +15,11 @@ const SIDE_NAV_ITEMS = [
   {
     label: 'Operations',
     route: '',
-    defaultPage: 'create-user-task',
+    defaultPage: '',
     hasChildren: true,
-    expanded: false,
+    expanded: true,
     active: false,
-    children: [
-      { label: 'Create User With Task', key: 'create-user-task', section: 'operations', route: '' },
-      { label: 'Create User', key: 'create-user', section: 'operations', route: '' },
-      { label: 'Delete User', key: 'delete-user', section: 'operations', route: '' },
-      { label: 'Add Feature', key: 'add-feature', section: 'operations', route: '' },
-    ],
+    children: [],
     rawIcon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>`
   },
   {
@@ -40,16 +35,20 @@ const SIDE_NAV_ITEMS = [
   {
     label: 'Admin',
     route: '',
-    defaultPage: 'admin-delete-user',
+    defaultPage: 'create-user-task',
     hasChildren: true,
-    expanded: false,
-    active: false,
+    expanded: true,
+    active: true,
     rawIcon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>`,
     children: [
+      { label: 'Create User With Task', key: 'create-user-task', section: 'admin', route: '' },
+      { label: 'Create User', key: 'create-user', section: 'admin', route: '' },
+      { label: 'Delete User', key: 'delete-user', section: 'admin', route: '' },
       { label: 'Admin Delete User', key: 'admin-delete-user', section: 'admin', route: '' },
       { label: 'Delete User With MSAN', key: 'delete-user-MSAN', section: 'admin', route: '' },
       { label: 'Admin Delete User With MSAN', key: 'admin-delete-user-MSAN', section: 'admin', route: '' },
       { label: 'Delete Voice', key: 'delete-voice', section: 'admin', route: '' },
+      { label: 'Add Feature', key: 'add-feature', section: 'admin', route: '' },
     ]
   },
   {
@@ -57,7 +56,7 @@ const SIDE_NAV_ITEMS = [
     route: '',
     defaultPage: 'change-voice-port',
     hasChildren: true,
-    expanded: false,
+    expanded: true,
     active: false,
     rawIcon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>`,
     children: [

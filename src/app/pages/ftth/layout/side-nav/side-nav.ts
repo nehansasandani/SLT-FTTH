@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter, inject } from '@angular/core';
+import { Component, Output, EventEmitter, inject, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { SIDE_NAV_ITEMS, DEFAULT_ACTIVE_PAGE } from './side-nav.constants';
@@ -14,7 +14,7 @@ import { SidebarService } from '../../../../sidebar.service';
 })
 export class SideNavComponent {
   sidebarService = inject(SidebarService);
-  activePage: string = DEFAULT_ACTIVE_PAGE;
+  @Input() activePage: string = DEFAULT_ACTIVE_PAGE;
   dotColors = ['dot-orange', 'dot-red', 'dot-green', 'dot-blue'];
   navItems: any[] = SIDE_NAV_ITEMS;
 
@@ -32,8 +32,11 @@ export class SideNavComponent {
     item.active = item.expanded;
 
     if(item.expanded && item.defaultPage){
-      this.activePage = item.defaultPage;
-      this.pageSelected.emit(JSON.stringify({ section: item.label.toLowerCase(), key: item.defaultPage }));
+      const hasActiveChild = item.children?.some((child: any) => child.key === this.activePage);
+      if (!hasActiveChild) {
+        this.activePage = item.defaultPage;
+        this.pageSelected.emit(JSON.stringify({ section: item.label.toLowerCase(), key: item.defaultPage }));
+      }
     }
     
     this.navItems.forEach(i => {
